@@ -17,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     CGRect viewRect = [[UIScreen mainScreen] bounds];
+    self.window = [[UIWindow alloc] initWithFrame:viewRect];
+    UIViewController *colourTouchVC = [[UIViewController alloc] init];
+    self.window.rootViewController = colourTouchVC;
+    [self.window makeKeyAndVisible];
     NSLog(@"Screen is %f tall and %f wide", viewRect.size.height, viewRect.size.width);
     return YES;
 }
