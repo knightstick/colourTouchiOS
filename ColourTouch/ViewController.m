@@ -16,7 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.view.backgroundColor = [UIColor colorWithRed:0.7 green:0.65 blue:0.9 alpha:1.0];
+}
+
+- (void)loadView
+{
+    CGRect viewRect = [[UIScreen mainScreen] bounds];
+    UIView *view = [[UIView alloc] initWithFrame:viewRect];
+    self.view = view;
 }
 
 - (void)didReceiveMemoryWarning {

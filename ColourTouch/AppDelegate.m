@@ -24,11 +24,6 @@
     // Initialize the View Controller
     self.viewController = [[ViewController alloc] init];
     
-    // Initialize the View
-    UIView *colourView = [[UIView alloc] initWithFrame:viewRect];
-    colourView.backgroundColor = [UIColor colorWithRed:0.7 green:0.65 blue:0.9 alpha:1.0];
-    self.viewController.view = colourView;
-    
     // Set the View Controller as the root view controller
     self.window.rootViewController = self.viewController;
     
