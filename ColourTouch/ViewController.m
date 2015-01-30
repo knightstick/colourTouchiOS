@@ -38,6 +38,9 @@
     firstLabel.text = @"Best. App. Evor.";
     
     [self.view addSubview:firstLabel];
+    
+    // Watch for the button push
+    [firstButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)loadView
@@ -50,6 +53,15 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     NSLog(@"Started touching the screen");
+}
+
+- (void)buttonPressed:(UIButton *)sender
+{
+    NSLog(@"Button pressed, sender: %@", sender);
+    self.view.backgroundColor = [UIColor colorWithRed:((double)arc4random() / 0x10000000)
+                                                green:((double)arc4random() / 0x10000000)
+                                                 blue:((double)arc4random() / 0x10000000)
+                                                alpha:(0.5)];
 }
 
 - (void)didReceiveMemoryWarning {
