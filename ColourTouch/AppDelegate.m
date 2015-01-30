@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,14 +20,18 @@
     // Initialize the window frame
     CGRect viewRect = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:viewRect];
+    
     // Initialize the View Controller
-    UIViewController *colourTouchVC = [[UIViewController alloc] init];
+    self.viewController = [[ViewController alloc] init];
+    
     // Initialize the View
     UIView *colourView = [[UIView alloc] initWithFrame:viewRect];
     colourView.backgroundColor = [UIColor colorWithRed:0.7 green:0.65 blue:0.9 alpha:1.0];
-    colourTouchVC.view = colourView;
+    self.viewController.view = colourView;
+    
     // Set the View Controller as the root view controller
-    self.window.rootViewController = colourTouchVC;
+    self.window.rootViewController = self.viewController;
+    
     // Window gets all the keyboard and touch events
     [self.window makeKeyAndVisible];
     NSLog(@"Screen is %f tall and %f wide", viewRect.size.height, viewRect.size.width);
