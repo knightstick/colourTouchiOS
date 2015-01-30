@@ -31,6 +31,13 @@
     // Add the button on top of the view
     [self.view addSubview:firstButton];
     
+    // Create a new label with a frame
+    UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 30, 200, 44)];
+    
+    // Set the label text
+    firstLabel.text = @"Best. App. Evor.";
+    
+    [self.view addSubview:firstLabel];
 }
 
 - (void)loadView
