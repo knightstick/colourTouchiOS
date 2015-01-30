@@ -18,6 +18,19 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor colorWithRed:0.7 green:0.65 blue:0.9 alpha:1.0];
+    
+    // Create a button of type Rounded Rect
+    UIButton *firstButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+    // Locate the button
+    firstButton.frame = CGRectMake(100,100,100,44);
+    
+    // Set the button title
+    [firstButton setTitle:@"Click Me!" forState:UIControlStateNormal];
+    
+    // Add the button on top of the view
+    [self.view addSubview:firstButton];
+    
 }
 
 - (void)loadView
